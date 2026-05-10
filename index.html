@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sermon AI Generator</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>🙏 Sermon AI Generator</h1>
+            <p>Generate inspiring sermons for your congregation</p>
+        </header>
+
+        <main>
+            <div class="form-section">
+                <label for="inputText">Enter Bible Verse, Topic, or Name:</label>
+                <input 
+                    type="text" 
+                    id="inputText" 
+                    placeholder="e.g., John 3:16, Love, Forgiveness, or Pastor John"
+                    aria-label="Sermon input"
+                >
+                <button id="generateBtn" onclick="generateSermon()">Generate Sermon</button>
+            </div>
+
+            <div class="output-section">
+                <label for="outputText">Generated Sermon:</label>
+                <textarea 
+                    id="outputText" 
+                    placeholder="Your AI-generated sermon will appear here..."
+                    readonly
+                    aria-label="Generated sermon output"
+                ></textarea>
+                <button id="copyBtn" onclick="copyToClipboard()" class="secondary-btn">Copy to Clipboard</button>
+            </div>
+
+            <div id="loadingSpinner" class="spinner hidden"></div>
+            <div id="errorMessage" class="error-message hidden"></div>
+        </main>
+
+        <footer>
+            <p>&copy; 2026 Sermon AI Generator. Powered by AI</p>
+        </footer>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
